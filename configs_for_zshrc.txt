@@ -1,0 +1,32 @@
+#Git
+alias gs='git status'
+alias gad='git add .'
+alias gb='git branch '
+alias gmm='git commit -m '
+alias gd='git diff'
+alias gco='git checkout '
+alias grl='git reflog'
+alias gl='git log'
+alias gphf='git push -f'
+alias gph='git push'
+alias gpl='git pull'
+alias gf='git fetch'
+alias gri='git rebase -i'
+
+# Load version control information
+autoload -Uz vcs_info
+precmd() { vcs_info }
+
+# Format the vcs_info_msg_0_ variable
+zstyle ':vcs_info:git:*' formats '(%b)'
+
+# Set up the prompt (with git branch name)
+setopt PROMPT_SUBST
+PROMPT='%F{208}%n%f in ${PWD/#$HOME/~} %F{120}${vcs_info_msg_0_}%f > '
+
+
+#PyEnv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
