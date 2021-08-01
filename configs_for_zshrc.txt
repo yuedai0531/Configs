@@ -13,6 +13,7 @@ alias gph='git push'
 alias gpl='git pull'
 alias gf='git fetch'
 alias gri='git rebase -i'
+alias cd..='cd ..'
 
 # Load version control information
 autoload -Uz vcs_info
