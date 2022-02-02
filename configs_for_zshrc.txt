@@ -18,6 +18,8 @@ alias gfo='git fetch origin'
 alias gri='git rebase -i'
 alias cd..='cd ..'
 
+alis dc='docker-compose'
+
 # git push origin main is simply telling GIT to push to the remote repository the local main branch.
 
 # Load version control information
