@@ -17,8 +17,11 @@ alias gf='git fetch'
 alias gfo='git fetch origin'
 alias gri='git rebase -i'
 alias cd..='cd ..'
+alias lsa='ls -a'
 
 alias dc='docker-compose'
+alias hg='history 0 | grep'
+alias c.='code .'  # for VS Code
 
 # git push origin main is simply telling GIT to push to the remote repository the local main branch.
 
