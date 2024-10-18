@@ -21,21 +21,17 @@ alias lsa='ls -a'
 
 alias dc='docker-compose'
 alias hg='history 0 | grep'
+alias h0='history 0'
 alias c.='code .'  # for VS Code
 
-# git push origin main is simply telling GIT to push to the remote repository the local main branch.
-
-# Load version control information
+# Set up the prompt (with git branch name)
 autoload -Uz vcs_info
 precmd() { vcs_info }
-
-# Format the vcs_info_msg_0_ variable
-zstyle ':vcs_info:git:*' formats '(%b)'
-
-# Set up the prompt (with git branch name)
 setopt PROMPT_SUBST
-PROMPT='%F{208}%n%f in ${PWD/#$HOME/~} %F{120}${vcs_info_msg_0_}%f > '
-
+# Format the vcs_info to show the branch name in Git repos
+zstyle ':vcs_info:git:*' formats '(%b)'
+# Set the prompt to display the username, current directory, and branch
+PROMPT='%F{208}yue%f in ${PWD/#$HOME/~} %F{120}${vcs_info_msg_0_}%f > '
 
 #PyEnv
 export PYENV_ROOT="$HOME/.pyenv"
